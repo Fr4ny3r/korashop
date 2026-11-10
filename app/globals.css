@@ -1,26 +1,87 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Paleta base (Coolors) */
+  --dust:        #DAD7CD;  /* gris beige */
+  --sage:        #A3B18A;
+  --fern:        #588157;
+  --forest:      #3A5A40;
+  --pine:        #344E41;
+    
+  /* Añadidos para el contraste secundario */
+  --beige:       #F3EDE0;  /* beige cálido, fondo claro */
+  --beige-deep:  #E9DFC9;  /* beige para superficies */
+  --ink:         #1F2E26;  /* texto sobre salvia */
+  --sage-light:  #BFCBA6;  /* texto de acento sobre fondo oscuro */
+     
+  /* Tema claro (sitio web) */
+  --background:            var(--beige);
+  --foreground:            var(--pine);
+  --card:                  var(--dust);
+  --card-foreground:       var(--pine);
+  --primary:               var(--forest);
+  --primary-foreground:    var(--beige);
+  --secondary:             var(--sage);
+  --secondary-foreground:  var(--ink);
+  --accent:                var(--fern);
+  --accent-foreground:     var(--beige);
+  --muted:                 var(--dust);
+  --muted-foreground:      #4A5F52;
+  --border:                var(--dust);
+  --input:                 var(--dust);
+  --ring:                  var(--fern);
+}  
+  
+/* Tema oscuro (landing y app) */
+.dark {
+  --background:            var(--pine);
+  --foreground:            var(--beige);
+  --card:                  var(--forest);
+  --card-foreground:       var(--beige);
+  --primary:               var(--sage);
+  --primary-foreground:    var(--ink);
+  --secondary:             var(--dust);
+  --secondary-foreground:  var(--pine);
+  --accent:                var(--fern);
+  --accent-foreground:     var(--beige);
+  --muted:                 var(--forest);
+  --muted-foreground:      #C9CDB8;
+  --border:                var(--fern);
+  --input:                 var(--fern);
+  --ring:                  var(--sage);
 }
 
-@theme inline {
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+  /* :root {
+  --background:            var(--pine);
+  --foreground:            var(--beige);
+  --card:                  var(--forest);
+  --card-foreground:       var(--beige);
+  --primary:               var(--sage);
+  --primary-foreground:    var(--ink);
+  --secondary:             var(--dust);
+  --secondary-foreground:  var(--pine);
+  --accent:                var(--fern);
+  --accent-foreground:     var(--beige);
+  --muted:                 var(--forest);
+  --muted-foreground:      #C9CDB8;
+  --border:                var(--fern);
+  --input:                 var(--fern);
+  --ring:                  var(--sage);
+} */
+ 
+}  
+ 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-anton);
 }
+   
